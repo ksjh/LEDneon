@@ -7,8 +7,8 @@
 // Unfortunately, for sensible values of "rr", the 2D shape
 // has to be scaled up so much that you cannot print it with
 // commonly available 3D printers in one piece. Otherwise,
-// you would lose way to many details or would create too sharp
-// edges for the LED tape.
+// you would lose way too many details or would create too
+// sharp edges for the LED tape.
 // This one here might even be printable on some printers,
 // since it consists of multiple separate shapes. Just use
 // intersection() with a cube to select the respective parts.
