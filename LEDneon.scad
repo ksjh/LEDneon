@@ -19,11 +19,11 @@ fl = 1.2;
 //Points of the star
 points = 5;
 
-//Star outer diameter
+//Star outer radius
 
 ro= 100 - rr / 2 - ww;
 
-//Star inner diameter
+//Star inner radius
 ri = 30;
 
 ///////////////////////////
