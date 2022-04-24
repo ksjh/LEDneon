@@ -20,7 +20,6 @@ fl = 1.2;
 points = 5;
 
 //Star outer radius
-
 ro= 100 - rr / 2 - ww;
 
 //Star inner radius
