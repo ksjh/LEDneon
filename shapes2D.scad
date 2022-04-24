@@ -2,6 +2,15 @@
 // to be included in own OpenSCAD scripts
 //
 
+module ngon2d(n=6, r=100) {
+    delta = 360 / n;
+    pp = [
+        for(i = [0:n-1])
+            [sin(i*delta)*r, cos(i*delta)*r] 
+    ];
+    polygon(pp);
+}
+
 module star2d(points=5, ro=100, ri=30) {
     delta = 180 / points;
     rd = ro - ri;
