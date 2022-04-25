@@ -14,29 +14,18 @@
 // intersection() with a cube to select the respective parts.
 // Feel free to expriment with the parameters.
 
-//Rounding radius
-rr = 18;
+//Global parameters for the dimension of the LED neon tape
+include <neon-dimension.scad>
 
-//Slot (tape) width (<rr/2)
-sw = 5;
-
-//Total height (incl. floor)
-h = 10;
-
-//Wall width
-ww = 1.2;
-
-//Floor height
-fl = 1.2;
 
 ///////////////////////////
 
 $fn = 60;
 
-include <LEDneon.scad>;
+include <include/LEDneon.scad>;
 
 translate([-240,85,0])
     frame3d(ww=ww, sw=sw, rr=rr, h=h) {
         scale([12,12,1])
-        import(file="BCDC.dxf");
+        import(file="graphics/BCDC.dxf");
     }
