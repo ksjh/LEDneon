@@ -13,6 +13,8 @@
 // since it consists of multiple separate shapes. Just use
 // intersection() with a cube to select the respective parts.
 // Feel free to expriment with the parameters.
+// For a better alternative, take a look at
+// BCDC-logo-parts-svg.scad
 
 //Global parameters for the dimension of the LED neon tape
 include <neon-dimension.scad>
