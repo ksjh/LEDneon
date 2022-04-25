@@ -1,3 +1,9 @@
+// Global parameter file for the neon tape
+//
+// Can be included in individual files,
+// parameters can be overwritten there.
+//
+
 //Rounding radius
 rr = 18;
 
