@@ -30,7 +30,7 @@ Some shapes might even be printable on common printers when they consist of mult
 
 ## Caveats
 - The fames to not contain holes for the wires. Yon need to add them yourself.
-- I have not printed a single one of this frames so far. Therefore, I cannot guarantee that they work as expected.
+- I have not printed a single one of these frames so far. Therefore, I cannot guarantee that they work as expected.
 
 ## Disclaimer
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
