@@ -40,3 +40,38 @@ module frame3d(ww=1.2, sw=5, rr=20, h=10, fl=1.2) {
                 children();
     }
 }
+
+// size reduced versions, roundoff does not increase the size that
+// much with these versions
+
+module roundoff2ds(rr=20) {
+    offset(r=-rr/2)
+        offset(r=rr)
+            offset(delta=-rr/8)
+                children();
+}
+
+module genslot3ds(sw=5, rr=20, h=10) {
+    linear_extrude(height=h)
+        genslot2d(sw=sw)
+            roundoff2ds(rr=rr)
+                children();
+}
+
+module wall3ds(ww=1.2, sw=5, rr=20, h=10) {
+    linear_extrude(height=h)
+        offset(r=ww)
+            genslot2d(sw=sw)
+                roundoff2ds(rr=rr)
+                    children();
+}
+
+module frame3ds(ww=1.2, sw=5, rr=20, h=10, fl=1.2) {
+    difference() {
+        wall3ds(ww=ww, sw=sw, rr=rr, h=h)
+            children();
+        translate([0,0,fl])
+            genslot3ds(sw=sw, rr=rr, h=h)
+                children();
+    }
+}
