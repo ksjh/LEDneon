@@ -1,7 +1,11 @@
 // OpenSCAD LED neon BCDC text (size reduced extrusion)
 //
-// Unfortunately, the resulting shape is too large for most printers,
-// so you need to print individual letters separately.
+// Uses extrusion method that does not increase the
+// size of the letters that much, makes text more
+// readable.
+// Generates individual letters.
+// You can play with the spacing parameter to
+// change this.
 //
 // Select the font name from the list of available fonts:
 // Menu: "Help" > "Font List"
