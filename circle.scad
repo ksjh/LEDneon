@@ -13,6 +13,6 @@ $fn=60;
 include <include/shapes2D.scad>;
 include <include/LEDneon.scad>;
 
-frame3d(ww=ww, sw=sw, rr=rr, h=h) {
+frame3d(ww=ww, sw=sw, rr=rr, h=h, fl=fl) {
     circle(r=r);
 }

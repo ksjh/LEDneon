@@ -18,6 +18,6 @@ include <include/shapes2D.scad>;
 include <include/LEDneon.scad>;
 
 translate([rr/2+ww, rr/2+ww, 0])
-    frame3d(ww=ww, sw=sw, rr=rr, h=h) {
+    frame3d(ww=ww, sw=sw, rr=rr, h=h, fl=fl) {
         square(size=size);
 }

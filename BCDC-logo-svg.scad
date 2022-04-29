@@ -23,7 +23,7 @@ $fn = 60;
 
 include <include/LEDneon.scad>;
 
-frame3d(ww=ww, sw=sw, rr=rr, h=h) {
+frame3d(ww=ww, sw=sw, rr=rr, h=h, fl=fl) {
     scale([3.2,3.2,1])
     import(file="graphics/BCDC.svg");
 }

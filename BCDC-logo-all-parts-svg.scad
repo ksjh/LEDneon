@@ -17,32 +17,32 @@ $fn = 60;
 
 include <include/LEDneon.scad>;
 
-frame3d(ww=ww, sw=sw, rr=rr, h=h) {
+frame3d(ww=ww, sw=sw, rr=rr, h=h, fl=fl) {
     scale([sf,sf,1])
     import(file="graphics/BCDC-part1.svg");
 }
 
 translate([17.5*sf,60*sf,0])
-frame3d(ww=ww, sw=sw, rr=rr, h=h) {
+frame3d(ww=ww, sw=sw, rr=rr, h=h, fl=fl) {
     scale([sf,sf,1])
     import(file="graphics/BCDC-part2.svg");
 }
 
 
 translate([0,123*sf,0])
-frame3d(ww=ww, sw=sw, rr=rr, h=h) {
+frame3d(ww=ww, sw=sw, rr=rr, h=h, fl=fl) {
     scale([sf,sf,1])
     import(file="graphics/BCDC-part3.svg");
 }
 
 translate([5*sf,167*sf,0])
-frame3d(ww=ww, sw=sw, rr=rr, h=h) {
+frame3d(ww=ww, sw=sw, rr=rr, h=h, fl=fl) {
     scale([sf,sf,1])
     import(file="graphics/BCDC-part4.svg");
 }
 
 translate([94*sf,100*sf,0])
-frame3d(ww=ww, sw=sw, rr=rr, h=h) {
+frame3d(ww=ww, sw=sw, rr=rr, h=h, fl=fl) {
     scale([sf,sf,1])
     import(file="graphics/BCDC-part5.svg");
 }

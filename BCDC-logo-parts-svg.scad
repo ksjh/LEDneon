@@ -30,7 +30,7 @@ include <include/LEDneon.scad>;
 
 filename=str("graphics/BCDC-part",part,".svg");
 
-frame3d(ww=ww, sw=sw, rr=rr, h=h) {
+frame3d(ww=ww, sw=sw, rr=rr, h=h, fl=fl) {
     scale([sf,sf,1])
     import(file=filename);
 }
