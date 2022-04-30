@@ -30,7 +30,7 @@ Some shapes might even be printable on common printers when they consist of mult
 - [`graphics/`](graphics/): contains an example BCDC logo vectorized from the [bigclive.com](http://bigclive.com/merch.htm) website
 
 ## Caveats
-- The fames to not contain holes for the wires. Yon need to add them yourself.
+- The frames to not contain holes for the wires. Yon need to add them yourself.
 - I have not printed a single one of these frames so far. Therefore, I cannot guarantee that they work as expected.
 
 ## Disclaimer
