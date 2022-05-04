@@ -57,6 +57,6 @@ module heart2d(w=160, h=160) {
             circle(r=r);
         translate([m2x,m2y,0])
             circle(r=r);
-        polygon([[qx,qy],[s1x,s1y],[m1x+r,m1y],[m2x+r,m2y],[s2x,s2y]]);
+        polygon([[qx,qy],[s1x,s1y],[m1x-r,m1y],[m2x+r,m2y],[s2x,s2y]]);
     }
 }
