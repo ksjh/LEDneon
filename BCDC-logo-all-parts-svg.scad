@@ -22,7 +22,7 @@ frame3d(ww=ww, sw=sw, rr=rr, h=h, fl=fl) {
     import(file="graphics/BCDC-part1.svg");
 }
 
-translate([17.5*sf,60*sf,0])
+translate([24*sf,64*sf,0])
 frame3d(ww=ww, sw=sw, rr=rr, h=h, fl=fl) {
     scale([sf,sf,1])
     import(file="graphics/BCDC-part2.svg");
