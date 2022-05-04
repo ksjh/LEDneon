@@ -20,8 +20,11 @@ font="Rockwell";
 //Text size
 size=190;
 
+//Rounding radius
+rr=25;
+
 //Letter spacing
-spacing=1.1;
+spacing=1.2;
 
 ///////////////////////////
 $fn=60;
