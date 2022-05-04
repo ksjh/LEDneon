@@ -20,7 +20,7 @@ Some shapes might even be printable on common printers when they consist of mult
 - [`triangle.scad`](triangle.scad): a simple triangle
 - [`roundstar.scad`](roundstar.scad): a star with rounded angles (this is how this little project started)
 - [`BCDC-text.scad`](BCDC-text.scad): a script to render text
-- [`BCDC-text2.scad`](BCDC-text2.scad): a script to render text clearer, uses extrusion method that does increase the size of the letters less
+- [`BCDC-text2.scad`](BCDC-text2.scad): a script to render text clearer, uses extrusion method that does increase the size of the letters less. [Stencil fonts](https://fonts.google.com/?query=stencil) like in the [official BCDC merch](http://bigclive.com/merch.htm) still do not work as expected at reasonable sizes of the letters.
 - [`BCDC-logo-dxf.scad`](BCDC-logo-dxf.scad): a script to generate frames from a DXF graphics file (old method)
 - [`BCDC-logo-svg.scad`](BCDC-logo-svg.scad): a script to generate frames from a SVG graphics file (new method)
 - [`BCDC-logo-parts-svg.scad`](BCDC-logo-parts-svg.scad): a script to generate 3D printable frames that form parts of a logo from separate SVG graphics files
