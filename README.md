@@ -27,6 +27,7 @@ There are some scripts to create frames from text. The most viable approach migh
 - [`moon.scad`](moon.scad): a waning moon shape
 - [`clover.scad`](clover.scad): a clover (shamrock) shape
 - [`line-tracing-svg.scad`](line-tracing-svg.scad): generate 3D frames for LED neon from lines in an SVG file
+- [`outline7seg.scad`](outline7seg.scad): generate outlines for large seven segment displays
 - [`include/shapes2D.scad`](include/shapes2D.scad): creates simple 2D shapes for extruding, can be included in own projects
 - [`include/LEDneon.scad`](include/LEDneon.scad): creates the LED neon frames from 2D shapes, can be included in own projects
 - [`graphics/`](graphics/): contains an example BCDC logo vectorized from the [bigclive.com](http://bigclive.com/merch.htm) website
