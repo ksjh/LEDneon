@@ -1,4 +1,4 @@
-// OpenSCAD LED neon clover leaf
+// OpenSCAD LED neon heart
 //
 
 //Global parameters for the dimension of the LED neon tape
