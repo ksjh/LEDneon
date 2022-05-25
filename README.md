@@ -24,6 +24,8 @@ There are some scripts to create frames from text. The most viable approach migh
 - [`BCDC-logo-parts-svg.scad`](BCDC-logo-parts-svg.scad): a script to generate 3D printable frames that form parts of a logo from separate SVG graphics files
 - [`BCDC-logo-all-parts-svg.scad`](BCDC-logo-all-parts-svg.scad): a script that displays a logo that is composed of multiple parts, just for control purposes
 - [`heart.scad`](heart.scad): a heart shape, inspired by discord user *Engineer_Nelfar*
+- [`moon.scad`](moon.scad): a waning moon shape
+- [`clover.scad`](clover.scad): a clover (shamrock) shape
 - [`include/shapes2D.scad`](include/shapes2D.scad): creates simple 2D shapes for extruding, can be included in own projects
 - [`include/LEDneon.scad`](include/LEDneon.scad): creates the LED neon frames from 2D shapes, can be included in own projects
 - [`graphics/`](graphics/): contains an example BCDC logo vectorized from the [bigclive.com](http://bigclive.com/merch.htm) website
