@@ -60,3 +60,20 @@ module heart2d(w=160, h=160) {
         polygon([[qx,qy],[s1x,s1y],[m1x-r,m1y],[m2x+r,m2y],[s2x,s2y]]);
     }
 }
+
+module moon2d(moondia=160, fullness=0.25) {
+    difference() {
+        circle(d=moondia);
+        translate([fullness*moondia,0,0])
+            circle(d=moondia);
+    }
+}
+
+module nclover2d(n=3, cd=200, clwf=1) {
+	rotate([0,0,(1-n%2)*180/n])
+		for(i=[0:n-1]) {
+			rotate([0,0,i*360/n])
+				heart2d(w=clwf*cd/2, h=cd/2);
+		}
+}
+ 
