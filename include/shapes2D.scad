@@ -76,4 +76,11 @@ module nclover2d(n=3, cd=200, clwf=1) {
 				heart2d(w=clwf*cd/2, h=cd/2);
 		}
 }
- 
+
+module seg7uh2d(segw=200, segt=40) {
+    polygon(points=[[0,0],[segt/2,segt/2],[segw-segt/2,segt/2],[segw,0],[segw-segt/2,-segt/2],[segt/2,-segt/2]]);
+}
+
+module seg7uv2d(segh=200, segt=40) {
+    polygon(points=[[0,0],[segt/2,segt/2],[segt/2,segh-segt/2],[0,segh],[-segt/2,segh-segt/2],[-segt/2,segt/2]]);
+}
