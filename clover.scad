@@ -10,7 +10,7 @@ n = 3;
 //Clover diameter
 cd = 200-rr-2*ww;
 
-//Cloveleaf width factor
+//Clover leaf width factor
 clwf = 1;
 
 //Rounding radius
