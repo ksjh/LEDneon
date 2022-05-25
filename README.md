@@ -8,7 +8,7 @@ Also works with text, but make sure the rounding radius `rr` is suitable.
 
 You can vectorize bitmaps in Inkscape, save the result as an SVN file and create LED neon frames from them. Unfortunately, for sensible values of `rr`, some 2D shapes have to be scaled up so much that you cannot print them with commonly available 3D printers in one piece. Otherwise, you would lose way too many details or would create too sharp edges for the LED tape. Some shapes work, however. Sometimes, it may make sense to print individual parts of the shapes individually. 
 
-There are some scripts to create frames from text. The most viable approach might be to print single letters separately, not complete words.
+There are some scripts to create frames from text. The most viable approach might be to print single letters separately, not complete words. Another approach is to draw the (handwritten) text as thin lines in an SVG file and then use the line tracing module to generate frames.
 
 ## Files
 - [`neon-dimension.scad`](neon-dimension.scad): the central configuration file for global parameters like the size of the LED neon strip
