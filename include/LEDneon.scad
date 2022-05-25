@@ -75,3 +75,32 @@ module frame3ds(ww=1.2, sw=5, rr=20, h=10, fl=1.2) {
                 children();
     }
 }
+
+module genslot2dl(sw=5) {
+    offset(delta=sw/2, chamfer=false)
+        children();
+}
+
+module genslot3dl(sw=5, h=10) {
+    linear_extrude(height=h)
+        genslot2dl(sw=sw)
+            children();
+}
+
+
+module wall3dl(ww=1.2, sw=5, h=10) {
+    linear_extrude(height=h)
+        offset(r=ww)
+            genslot2dl(sw=sw)
+                children();
+}
+
+module lineframe3d(ww=1.2, sw=5, h=10, fl=1.2) {
+    difference() {
+        wall3dl(ww=ww, sw=sw, h=h)
+            children();
+        translate([0,0,fl])
+            genslot3dl(sw=sw, h=h)
+                children();
+    }
+}
