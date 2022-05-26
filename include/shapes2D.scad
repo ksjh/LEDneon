@@ -70,11 +70,11 @@ module moon2d(moondia=160, fullness=0.25) {
 }
 
 module nclover2d(n=3, cd=200, clwf=1) {
-	rotate([0,0,(1-n%2)*180/n])
-		for(i=[0:n-1]) {
-			rotate([0,0,i*360/n])
-				heart2d(w=clwf*cd/2, h=cd/2);
-		}
+    rotate([0,0,(1-n%2)*180/n])
+	    for(i=[0:n-1]) {
+		    rotate([0,0,i*360/n])
+			    heart2d(w=clwf*cd/2, h=cd/2);
+    }
 }
 
 module seg7uh2d(segw=200, segt=40) {

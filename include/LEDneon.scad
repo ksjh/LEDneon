@@ -104,3 +104,32 @@ module lineframe3d(ww=1.2, sw=5, h=10, fl=1.2) {
                 children();
     }
 }
+
+module genslot2dlr(sw=5) {
+    offset(r=sw/2, chamfer=false)
+        children();
+}
+
+module genslot3dlr(sw=5, h=10) {
+    linear_extrude(height=h)
+        genslot2dlr(sw=sw)
+            children();
+}
+
+
+module wall3dlr(ww=1.2, sw=5, h=10) {
+    linear_extrude(height=h)
+        offset(r=ww)
+            genslot2dlr(sw=sw)
+                children();
+}
+
+module lineframe3dr(ww=1.2, sw=5, h=10, fl=1.2) {
+    difference() {
+        wall3dlr(ww=ww, sw=sw, h=h)
+            children();
+        translate([0,0,fl])
+            genslot3dlr(sw=sw, h=h)
+                children();
+    }		
+}
