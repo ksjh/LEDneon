@@ -27,6 +27,7 @@ There are some scripts to create frames from text. The most viable approach migh
 - [`moon.scad`](moon.scad): a waning moon shape
 - [`clover.scad`](clover.scad): a clover (shamrock) shape
 - [`line-tracing-svg.scad`](line-tracing-svg.scad): generate 3D frames for LED neon from lines in an SVG file
+- [`line-flame-svg.scad`](line-flame-svg.scad): a flame generated using line tracing from an SVG path
 - [`outline7seg.scad`](outline7seg.scad): generate outlines for large seven segment displays
 - [`sevensegcube.scad`](sevensegcube.scad): a cube with slots for pieces of LED neon as segments of a 7-segment display, **does not use the central config file**.
 - [`sevensegplate.scad`](sevensegplate.scad): a plate with slots for pieces of LED neon as segments of a 7-segment display, **does not use the central config file**.
