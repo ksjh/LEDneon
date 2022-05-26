@@ -2,6 +2,11 @@
 // 
 // A plate with slots for pieces of LED neon
 // as segments of a 7-segment display
+//
+// ATTENTION:
+// This is not a classic LEDneon frame and
+// DOES *NOT* USE THE CENTRAL CONFIG FILE
+/////////////////////////////////////////////////////////
 
 //Height of a single vertical segment
 segh = 50;
