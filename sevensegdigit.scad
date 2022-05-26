@@ -1,6 +1,6 @@
-// OpenSCAD LED neon 7 segment display plate
+// OpenSCAD LED neon 7 segment display connected slots
 // 
-// A plate with slots for pieces of LED neon
+// A set of connected slots for pieces of LED neon
 // as segments of a 7-segment display
 
 //Height of a single vertical segment
