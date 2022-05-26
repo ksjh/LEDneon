@@ -17,7 +17,7 @@ segt = 5;
 segg = 5;
 
 //Depth of the slots
-segd = 12;
+segd = 10;
 
 //Hole offset horizontal
 hoh = 25;
