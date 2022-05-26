@@ -35,25 +35,25 @@ btb = 15;
 blr = 10;
 
 ///////////////////////////
-//Z-fight
-zf = 0.01;
+//Prevent planefighting
+pf = 0.01;
 
 module onesegh() {
-    cube([segw, segt, segd+zf]);
+    cube([segw, segt, segd+pf]);
 }
 
 module holeh() {
-    translate([hoh-segt/2,0,-zf])
-        cube([segt, segt, fl+3*zf]);           
+    translate([hoh-segt/2,0,-pf])
+        cube([segt, segt, fl+3*pf]);           
 }
 
 module onesegv() {
-    cube([segt, segh, segd+zf]);
+    cube([segt, segh, segd+pf]);
 }
 
 module holev() {
-    translate([0,hov-segt/2,-zf])
-        cube([segt, segt, fl+3*zf]);
+    translate([0,hov-segt/2,-pf])
+        cube([segt, segt, fl+3*pf]);
 }
 
 module sevensegslots() {
@@ -93,7 +93,7 @@ module drillholes() {
 difference(){
     translate([-segt/2-blr,-segt/2-btb,0])
         cube([2*blr+segt+segw+2*segg,2*btb+segt+2*segh+4*segg,fl+segd]);
-    translate([0,0,fl+zf])
+    translate([0,0,fl+pf])
         sevensegslots();
     drillholes();
 }

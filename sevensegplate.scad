@@ -38,8 +38,8 @@ btb = 5;
 blr = 5;
 
 ///////////////////////////
-//Z-fight
-zf = 0.01;
+//Prevent planefighting
+pf = 0.01;
 
 sh=segh+2*wt;
 sw=segw+2*wt;
@@ -50,27 +50,27 @@ module onesegh() {
     difference() {
         cube([segw+2*wt, segt+2*wt, segd+fl]);
         translate([wt,wt,fl])
-            cube([segw, segt, segd+zf]);
+            cube([segw, segt, segd+pf]);
     }
 
 }
 
 module holeh() {
-    translate([wt+hoh-segt/2,wt,-zf])
-        cube([segt, segt, fl+2*zf]);           
+    translate([wt+hoh-segt/2,wt,-pf])
+        cube([segt, segt, fl+2*pf]);           
 }
 
 module onesegv() {
     difference() {
         cube([segt+2*wt, segh+2*wt, segd+fl]);
         translate([wt,wt,fl])
-            cube([segt, segh, segd+zf]);
+            cube([segt, segh, segd+pf]);
     }
 }
 
 module holev() {
-    translate([wt,wt+hov-segt/2,-zf])
-        cube([segt, segt, fl+2*zf]);
+    translate([wt,wt+hov-segt/2,-pf])
+        cube([segt, segt, fl+2*pf]);
 }
 
 module sevensegplate() {
@@ -89,7 +89,7 @@ module sevensegplate() {
     translate([sw+2*segg-st/2,sh+3*segg,0])
         onesegv();
     translate([-st/2-blr,-st/2-btb,0])
-        cube([2*blr+st+sw+2*segg,2*btb+st+2*sh+4*segg,fl-zf]);
+        cube([2*blr+st+sw+2*segg,2*btb+st+2*sh+4*segg,fl-pf]);
 }
 
 module drillholes() {
