@@ -6,7 +6,7 @@
 // Modes:
 // 0 : normal mode for areas (closed paths)
 // 1 : size-reduced version for areas (closed paths)
-// 2 : line tracing for open paths (visually and technical)
+// 2 : line tracing for open paths (visually and technically)
 // 3 : line tracing for visually closed paths (technically open)
 //
 
