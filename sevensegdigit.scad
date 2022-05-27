@@ -47,48 +47,50 @@ sh=segh+2*wt;
 sw=segw+2*wt;
 st=segt+2*wt;
 
-module onesegh() {
-    difference() {
-        cube([segw+2*wt, segt+2*wt, segd+fl]);
-        translate([wt,wt,fl])
-            cube([segw, segt, segd+pf]);
-    }
+// mode = 0: generate slots
+// mode = 1: generate holes
 
-}
-
-module holeh() {
+module onesegh(mode=0) {
+    if(mode==0) {
+        difference() {
+            cube([segw+2*wt, segt+2*wt, segd+fl]);
+            translate([wt,wt,fl])
+                cube([segw, segt, segd+pf]);
+        }
+    } else {
     translate([wt+hoh-segt/2,wt,-pf])
-        cube([segt, segt, fl+2*pf]);           
-}
-
-module onesegv() {
-    difference() {
-        cube([segt+2*wt, segh+2*wt, segd+fl]);
-        translate([wt,wt,fl])
-            cube([segt, segh, segd+pf]);
+        cube([segt, segt, fl+2*pf]);
     }
 }
 
-module holev() {
-    translate([wt,wt+hov-segt/2,-pf])
-        cube([segt, segt, fl+2*pf]);
+module onesegv(mode=0) {
+    if(mode==0) {
+        difference() {
+            cube([segt+2*wt, segh+2*wt, segd+fl]);
+            translate([wt,wt,fl])
+                cube([segt, segh, segd+pf]);
+        }
+    } else {
+        translate([wt,wt+hov-segt/2,-pf])
+            cube([segt, segt, fl+2*pf]);
+    }
 }
 
-module sevensegslots() {
+module sevensegslots(mode=0) {
     translate([segg,-st/2,0])
-        onesegh();
+        onesegh(mode=mode);
     translate([-st/2,segg,0])
-        onesegv();
+        onesegv(mode=mode);
     translate([segg,sh+2*segg-st/2,0])
-        onesegh();
+        onesegh(mode=mode);
     translate([-st/2,sh+3*segg,0])
-        onesegv();
+        onesegv(mode=mode);
     translate([segg,2*sh+4*segg-st/2,0])
-        onesegh();
+        onesegh(mode=mode);
     translate([sw+2*segg-st/2,segg,0])
-        onesegv();
+        onesegv(mode=mode);
     translate([sw+2*segg-st/2,sh+3*segg,0])
-        onesegv();
+        onesegv(mode=mode);
 }
 
 module segconn() {
@@ -102,27 +104,10 @@ module segconn() {
     }
 }
 
-module drillholes() {
-    translate([segg,-st/2,0])
-        holeh();
-    translate([-st/2,segg,0])
-        holev();
-    translate([segg,sh+2*segg-st/2,0])
-        holeh();
-    translate([-st/2,sh+3*segg,0])
-        holev();
-    translate([segg,2*sh+4*segg-st/2,0])
-        holeh();
-    translate([sw+2*segg-st/2,segg,0])
-        holev();
-    translate([sw+2*segg-st/2,sh+3*segg,0])
-        holev();
-}
-
 difference() {
     union() {
-        sevensegslots();
+        sevensegslots(mode=0);
         segconn();
     }
-    drillholes();
+    sevensegslots(mode=1);
 }

@@ -43,62 +43,48 @@ blr = 10;
 //Prevent planefighting
 pf = 0.01;
 
-module onesegh() {
-    cube([segw, segt, segd+pf]);
+// mode = 0: generate slots
+// mode = 1: generate holes
+
+module onesegh(mode=0) {
+    if(mode==0) {
+        cube([segw, segt, segd+pf]);
+    } else {
+        translate([hoh-segt/2,0,-pf])
+            cube([segt, segt, fl+3*pf]);
+    }        
 }
 
-module holeh() {
-    translate([hoh-segt/2,0,-pf])
-        cube([segt, segt, fl+3*pf]);           
+module onesegv(mode=0) {
+    if(mode==0) {
+        cube([segt, segh, segd+pf]);
+    } else {
+        translate([0,hov-segt/2,-pf])
+            cube([segt, segt, fl+3*pf]);
+    }
 }
 
-module onesegv() {
-    cube([segt, segh, segd+pf]);
-}
-
-module holev() {
-    translate([0,hov-segt/2,-pf])
-        cube([segt, segt, fl+3*pf]);
-}
-
-module sevensegslots() {
+module sevensegslots(mode=0) {
     translate([segg,-segt/2,0])
-        onesegh();
+        onesegh(mode=mode);
     translate([-segt/2,segg,0])
-        onesegv();
+        onesegv(mode=mode);
     translate([segg,segh+2*segg-segt/2,0])
-        onesegh();
+        onesegh(mode=mode);
     translate([-segt/2,segh+3*segg,0])
-        onesegv();
+        onesegv(mode=mode);
     translate([segg,2*segh+4*segg-segt/2,0])
-        onesegh();
+        onesegh(mode=mode);
     translate([segw+2*segg-segt/2,segg,0])
-        onesegv();
+        onesegv(mode=mode);
     translate([segw+2*segg-segt/2,segh+3*segg,0])
-        onesegv();
-}
-
-module drillholes() {
-    translate([segg,-segt/2,0])
-        holeh();
-    translate([-segt/2,segg,0])
-        holev();
-    translate([segg,segh+2*segg-segt/2,0])
-        holeh();
-    translate([-segt/2,segh+3*segg,0])
-        holev();
-    translate([segg,2*segh+4*segg-segt/2,0])
-        holeh();
-    translate([segw+2*segg-segt/2,segg,0])
-        holev();
-    translate([segw+2*segg-segt/2,segh+3*segg,0])
-        holev();
+        onesegv(mode=mode);
 }
 
 difference(){
     translate([-segt/2-blr,-segt/2-btb,0])
         cube([2*blr+segt+segw+2*segg,2*btb+segt+2*segh+4*segg,fl+segd]);
     translate([0,0,fl+pf])
-        sevensegslots();
-    drillholes();
+        sevensegslots(mode=0);
+    sevensegslots(mode=1);
 }
