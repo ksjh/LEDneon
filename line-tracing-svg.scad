@@ -10,7 +10,8 @@
 // (convert them to arcs of suitable size)
 // or make sure that the angles are more or less
 // 90 degrees, so that you can butt two (or three)
-// pieces of LED neon together at the crossing point.
+// pieces of LED neon together at the crossing or
+// touching point.
 //
 // Also, you need to make sure you do not create a
 // closed area. You need to make sure that you
@@ -18,7 +19,7 @@
 // all corners, there should be only one single
 // point. Otherwise, the transitions between the
 // segments of the path might look odd.
-// See "graphics/7seg.svg" for an examaple.
+// See "graphics/line-7seg.svg" for an examaple.
 // This example does not have rounded corners,
 // so it is not well-suited for LED neon, but
 // shows the concept of a closed form represented
