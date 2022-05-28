@@ -55,6 +55,15 @@ module onesegh(mode=0) {
     }        
 }
 
+totalw = 2*blr+segt+segw+2*segg;
+totalh = 2*btb+segt+2*segh+4*segg;
+totald = fl+segd;
+
+echo("Overall size");
+echo(str("Total width:  ", totalw));
+echo(str("Total height: ", totalh));
+echo(str("Total depth:  ", totald));
+
 module onesegv(mode=0) {
     if(mode==0) {
         cube([segt, segh, segd+pf]);
@@ -83,7 +92,7 @@ module sevensegslots(mode=0) {
 
 difference(){
     translate([-segt/2-blr,-segt/2-btb,0])
-        cube([2*blr+segt+segw+2*segg,2*btb+segt+2*segh+4*segg,fl+segd]);
+        cube([totalw,totalh,totald]);
     translate([0,0,fl+pf])
         sevensegslots(mode=0);
     sevensegslots(mode=1);

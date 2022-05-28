@@ -1,7 +1,8 @@
 // OpenSCAD LED neon 7 segment display connected slots
 // 
 // A set of connected slots for pieces of LED neon
-// as segments of a 7-segment display
+// as segments of a 7-segment display with or
+// without base plate
 //
 // ATTENTION:
 // This is not a classic LEDneon frame and
@@ -39,6 +40,15 @@ hoh = 25;
 //Hole offset vertical
 hov = 25;
 
+//Add a baseplate?
+plate = true;
+
+//Plate border top and bottom
+btb = 5;
+
+//Plate border left and right
+blr = 5;
+
 ///////////////////////////
 //Prevent planefighting
 pf = 0.01;
@@ -46,6 +56,15 @@ pf = 0.01;
 sh=segh+2*wt;
 sw=segw+2*wt;
 st=segt+2*wt;
+
+totalw = (plate?2*blr:0)+st+sw+2*segg;
+totalh = (plate?2*btb:0)+st+2*sh+4*segg;
+totald = segd+fl;
+
+echo("Overall size");
+echo(str("Total width:  ", totalw));
+echo(str("Total height: ", totalh));
+echo(str("Total depth:  ", totald));
 
 // mode = 0: generate slots
 // mode = 1: generate holes
@@ -108,6 +127,10 @@ difference() {
     union() {
         sevensegslots(mode=0);
         segconn();
+        if(plate) {
+            translate([-st/2-blr,-st/2-btb,0])
+                cube([totalw,totalh,fl-pf]);
+        }
     }
     sevensegslots(mode=1);
 }
