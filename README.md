@@ -12,21 +12,22 @@ There are some scripts to create frames from text. The most viable approach migh
 
 ## Files
 - [`neon-dimension.scad`](neon-dimension.scad): the central configuration file for global parameters like the size of the LED neon strip
+- [`roundstar.scad`](roundstar.scad): a star with rounded angles (this is how this little project started)
 - [`circle.scad`](circle.scad): a simple circle
 - [`square.scad`](square.scad): a simple square
 - [`hexagon.scad`](hexagon.scad): a simple hexagon
 - [`triangle.scad`](triangle.scad): a simple triangle
-- [`roundstar.scad`](roundstar.scad): a star with rounded angles (this is how this little project started)
+- [`heart.scad`](heart.scad): a heart shape, inspired by discord user *Engineer_Nelfar*
+- [`moon.scad`](moon.scad): a waning moon shape
+- [`clover.scad`](clover.scad): a clover shape
+- [`shamrock.scad`](shamrock.scad): a shamrock shape (clover with stem)
 - [`BCDC-text.scad`](BCDC-text.scad): a script to render text
 - [`BCDC-text2.scad`](BCDC-text2.scad): a script to render text clearer, uses extrusion method that does increase the size of the letters less. [Stencil fonts](https://fonts.google.com/?query=stencil) like in the [official BCDC merch](http://bigclive.com/merch.htm) still do not work as expected at reasonable sizes of the letters.
 - [`BCDC-logo-dxf.scad`](BCDC-logo-dxf.scad): a script to generate frames from a DXF graphics file (old method)
-- [`BCDC-logo-svg.scad`](BCDC-logo-svg.scad): a script to generate frames from a SVG graphics file (new method)
+- [`BCDC-logo-svg.scad`](BCDC-logo-svg.scad): a script to generate frames from an SVG graphics file (new method)
 - [`BCDC-logo-parts-svg.scad`](BCDC-logo-parts-svg.scad): a script to generate 3D printable frames that form parts of a logo from separate SVG graphics files
 - [`BCDC-logo-all-parts-svg.scad`](BCDC-logo-all-parts-svg.scad): a script that displays a logo that is composed of multiple parts, just for control purposes
-- [`heart.scad`](heart.scad): a heart shape, inspired by discord user *Engineer_Nelfar*
-- [`moon.scad`](moon.scad): a waning moon shape
-- [`clover.scad`](clover.scad): a clover (shamrock) shape
-- [`line-tracing-svg.scad`](line-tracing-svg.scad): generate 3D frames for LED neon from lines in an SVG file
+- [`line-tracing-svg.scad`](line-tracing-svg.scad): generate 3D frames for LED neon from lines (e.g., handwritten text) in an SVG file
 - [`line-flame-svg.scad`](line-flame-svg.scad): a flame generated using line tracing from an SVG path
 - [`outline7seg.scad`](outline7seg.scad): generate outlines for large seven segment displays
 - [`sevensegcube.scad`](sevensegcube.scad): a cube with slots for pieces of LED neon as segments of a 7-segment display, **does not use the central config file**.

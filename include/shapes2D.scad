@@ -77,6 +77,20 @@ module nclover2d(n=3, cd=200, clwf=1) {
     }
 }
 
+module shamrock2d(cd=200) {
+	nclover2d(n=3, cd=cd, clwf=1);
+	rotate([0,0,45/3])
+		intersection() {
+			translate([-cd,0,0])
+				difference() {
+					circle(d=2*cd);
+					translate([0,0.05*2*cd,0])
+						circle(d=2*cd);
+				}
+			circle(d=1.5*cd);
+		}
+}
+
 module seg7uh2d(segw=200, segt=40) {
     polygon(points=[[0,0],[segt/2,segt/2],[segw-segt/2,segt/2],[segw,0],[segw-segt/2,-segt/2],[segt/2,-segt/2]]);
 }
