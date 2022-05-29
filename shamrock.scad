@@ -1,5 +1,7 @@
 // OpenSCAD LED neon shamrock
 //
+// Total height: 1.5 times parameter "cd"
+//
 
 //Global parameters for the dimension of the LED neon tape
 include <neon-dimension.scad>
