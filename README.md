@@ -10,6 +10,8 @@ You can vectorize bitmaps in Inkscape, save the result as an SVN file and create
 
 There are some scripts to create frames from text. The most viable approach might be to print single letters separately, not complete words. Another approach is to draw the (handwritten) text as thin lines in an SVG file and then use the line tracing module to generate frames.
 
+The project also includes scripts to create box and lid style signs, inspired by BigClive's script in the description of his livestream on 2022-06-11. These signs are not intended for LED neon, but for fitting normal LEDs inside. They work both with text and most 2D shapes. The examples for those do not use the central configuration file.
+
 ## Files
 - [`neon-dimension.scad`](neon-dimension.scad): the central configuration file for global parameters like the size of the LED neon strip
 - [`roundstar.scad`](roundstar.scad): a star with rounded angles (this is how this little project started)
@@ -33,8 +35,12 @@ There are some scripts to create frames from text. The most viable approach migh
 - [`sevensegcube.scad`](sevensegcube.scad): a cube with slots for pieces of LED neon as segments of a 7-segment display, **does not use the central config file**.
 - [`sevensegplate.scad`](sevensegplate.scad): a plate with slots for pieces of LED neon as segments of a 7-segment display, **does not use the central config file**.
 - [`sevensegdigit.scad`](sevensegdigit.scad): a set of connected slots for one digit of a 7-segment display, **does not use the central config file**.
+- [`signbody.scad`](signbody.scad): the body of a sign, inspired by BigClive's script in the description of his livestream on 2022-06-11, **not for LED neon, does not use the central config file**.
+- [`signface.scad`](signface.scad): the front face of a sign, inspired by BigClive's script in the description of his livestream on 2022-06-11, **not for LED neon, does not use the central config file**.
+- [`signbody-shamrock.scad`](signbody-shamrock.scad): the body of a shamrock sign, inspired by BigClive's script in the description of his livestream on 2022-06-11, **not for LED neon, does not use the central config file**.
 - [`include/shapes2D.scad`](include/shapes2D.scad): creates simple 2D shapes for extruding, can be included in own projects
 - [`include/LEDneon.scad`](include/LEDneon.scad): creates the LED neon frames from 2D shapes, can be included in own projects
+- [`include/signmaker.scad`](include/signmaker.scad): creates box and lid style signs from 2D shapes and text, can be included in own projects
 - [`graphics/`](graphics/): contains an example BCDC logo vectorized from the [bigclive.com](http://bigclive.com/merch.htm) website
 
 ## Caveats
