@@ -3,20 +3,9 @@
 // Inspried by script in description of
 // BigClive's livestream from 2022-06-11.
 //
-//
-// Select the font name from the list of available fonts:
-// Menu: "Help" > "Font List"
-//
 
-//Text to render
-text="A";
-
-//Font to use
-font="Arial";
-
-
-// Clover size
-// final size = 1.5 * size + 2*ww + 2*ext
+//Clover size
+//(final size = 1.5 * size + 2*ww + 2*ext)
 size = 150;
 
 
