@@ -21,7 +21,8 @@ fl=1.2;
 //Face depth
 fh=1.2;
 
-//Extension for creating open area
+//Extension for creating an open area in the middle
+//of the clover leaf
 ext=2;
 
 ///////////////////////////
