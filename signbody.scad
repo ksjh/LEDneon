@@ -37,6 +37,6 @@ $fn=60;
 
 include <include/signmaker.scad>;
 
-signbody(h=h, ww=ww, fl=fl, fh=fh) {
+signbody(h=h, ww=ww, fl=fl, fh=fh, pl=pl) {
     text(text, font=font, size=size);
 }

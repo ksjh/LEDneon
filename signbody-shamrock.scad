@@ -6,20 +6,23 @@
 
 //Clover size
 //(final size = 1.5*size + ww + 2*ext)
-size = 150;
+size = 100;
 
 
 //Height of the sign body
 h=10;
 
 //Wall width
-ww=2;
+ww=2.4;
 
 //Floor height
 fl=1.2;
 
 //Face depth
 fh=1.2;
+
+//Play for fitting face
+pl=0.2;
 
 //Extension for creating an open area in the middle
 //of the clover leaf
@@ -31,7 +34,13 @@ $fn=60;
 include <include/signmaker.scad>;
 include <include/shapes2d.scad>;
 
-signbody(h=h, ww=ww, fl=fl, fh=fh) {
+makesign(h=h, ww=ww, fl=fl, fh=fh, pl=pl, face=false) {
     offset(delta=ext)
         shamrock2d(cd=size, clwf=1.2);
 }
+
+%translate([0,0,h-fh])
+    makesign(h=h, ww=ww, fl=fl, fh=fh, pl=pl, face=true) {
+        offset(delta=ext)
+            shamrock2d(cd=size, clwf=1.2);
+    }

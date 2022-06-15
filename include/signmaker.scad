@@ -23,3 +23,13 @@ module signface(fh=1.2) {
     linear_extrude(height=fh)
         children();
 }
+
+module makesign(h=10, ww=2.4, fl=1.2, fh=1.2, pl=0.2, face=false) {
+    if(face)
+        signface(fh=fh)
+            children();
+    else
+        signbody(h=h, ww=ww, fl=fl, fh=fh, pl=pl)
+            children();
+}
+        
