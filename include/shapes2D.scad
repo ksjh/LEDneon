@@ -71,24 +71,24 @@ module moon2d(moondia=160, fullness=0.25) {
 
 module nclover2d(n=3, cd=200, clwf=1) {
     rotate([0,0,(1-n%2)*180/n])
-	    for(i=[0:n-1]) {
-		    rotate([0,0,i*360/n])
-			    heart2d(w=clwf*cd/2, h=cd/2);
-    }
+        for(i=[0:n-1]) {
+            rotate([0,0,i*360/n])
+            heart2d(w=clwf*cd/2, h=cd/2);
+        }
 }
 
-module shamrock2d(cd=200) {
-	nclover2d(n=3, cd=cd, clwf=1);
-	rotate([0,0,45/3])
-		intersection() {
-			translate([-cd,0,0])
-				difference() {
-					circle(d=2*cd);
-					translate([0,0.05*2*cd,0])
-						circle(d=2*cd);
-				}
-			circle(d=1.5*cd);
-		}
+module shamrock2d(cd=200, clwf=1) {
+    nclover2d(n=3, cd=cd, clwf=clwf);
+    rotate([0,0,45/3])
+        intersection() {
+            translate([-cd,0,0])
+                difference() {
+                    circle(d=2*cd);
+                    translate([0,0.05*2*cd,0])
+                    circle(d=2*cd);
+                }
+            circle(d=1.5*cd);
+        }
 }
 
 module seg7uh2d(segw=200, segt=40) {
