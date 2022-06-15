@@ -17,17 +17,20 @@ font="Arial";
 //Text size
 size=50;
 
-//Depth of the sign body
+//Height of the sign body
 h=10;
 
 //Wall width
 ww=2;
 
-//Floor height
+//Floor height (set to -1 for open base)
 fl=1.2;
 
-//Face depth
+//Face height
 fh=1.2;
+
+//Play for fitting face
+pl=0.2;
 
 ///////////////////////////
 $fn=60;

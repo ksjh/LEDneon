@@ -16,20 +16,14 @@ font="Arial";
 //Text size
 size=50;
 
-//Wall width
-ww=2;
-
 //Face depth
 fh=1.2;
-
-//Play for fitting face
-pl=0.2;
 
 ///////////////////////////
 $fn=60;
 
 include <include/signmaker.scad>;
 
-signface(ww=ww, fh=fh, pl=pl) {
+signface(fh=fh) {
     text(text, font=font, size=size);
 }
