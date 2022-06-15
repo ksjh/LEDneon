@@ -41,7 +41,7 @@ The project also includes scripts to create box and lid style signs, inspired by
 - [`include/shapes2D.scad`](include/shapes2D.scad): creates simple 2D shapes for extruding, can be included in own projects
 - [`include/LEDneon.scad`](include/LEDneon.scad): creates the LED neon frames from 2D shapes, can be included in own projects
 - [`include/signmaker.scad`](include/signmaker.scad): creates box and lid style signs from 2D shapes and text, can be included in own projects
-- [`graphics/`](graphics/): contains an example BCDC logo vectorized from the [bigclive.com](http://bigclive.com/merch.htm) website
+- [`graphics/`](graphics/): contains example graphics files to create LED neon signs from, e.g., a BCDC logo vectorized from the [bigclive.com](http://bigclive.com/merch.htm) website
 
 ## Caveats
 - The frames to not contain holes for the wires. Yon need to add them yourself.
