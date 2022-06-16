@@ -16,7 +16,7 @@ font="Arial";
 //Text size
 size=50;
 
-//Face depth
+//Face height
 fh=1.2;
 
 ///////////////////////////
