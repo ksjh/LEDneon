@@ -27,7 +27,7 @@ h=20;
 ww=2.8;
 
 //Floor height (set to -1 for open base)
-fl=1.2;
+fl=2.4;
 
 //Face height
 fh=1.2;
@@ -39,7 +39,7 @@ pl=0.2;
 face=false;
 
 //brim width to hold letters together
-brim=6;
+brim=8;
 
 ///////////////////////////
 $fn=60;
@@ -53,6 +53,6 @@ makesign(h=h, ww=ww, fl=fl, fh=fh, pl=pl, face=face) {
 }
 if(!face) {
     linear_extrude(fl-pf)
-        offset(delta=brim, chamfer=false)
+        offset(delta=brim, chamfer=true)
             text(text, font=font, size=size, spacing=space);
 }
