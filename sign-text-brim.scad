@@ -12,10 +12,14 @@
 text="Air";
 
 //Font to use
-font="Roboto Slab:style=Bold";
+//here: DayPosterBlack by Nick Curtis
+//https://www.nicksfonts.com/
+//https://www.dafont.com/nicks-fonts.d83
+
+font="DayPosterBlack:style=Regular";
 
 //Text size
-size=90;
+size=60;
 
 //Text spacing
 space=1.0;
@@ -24,7 +28,7 @@ space=1.0;
 h=20;
 
 //Wall width
-ww=2.8;
+ww=2.4;
 
 //Floor height (set to -1 for open base)
 fl=2.4;
