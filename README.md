@@ -38,7 +38,8 @@ The project also includes scripts to create box and lid style signs, inspired by
 - [`signbody.scad`](signbody.scad): the body of a sign, inspired by BigClive's script in the description of his livestream on 2022-06-11, **not for LED neon, does not use the central config file**
 - [`signface.scad`](signface.scad): the front face of a sign, inspired by BigClive's script in the description of his livestream on 2022-06-11, **not for LED neon, does not use the central config file**
 - [`signbody-shamrock.scad`](signbody-shamrock.scad): the body of a shamrock sign, inspired by BigClive's script in the description of his livestream on 2022-06-11, **not for LED neon, does not use the central config file**
-- [`sign-cat-svg.scad`](sign-cat-svg.scad): create a box sign from imported SVG file of a cat, **not for LED neon, does not use the central config file**.
+- [`sign-cat-svg.scad`](sign-cat-svg.scad): create a box sign from imported SVG file of a cat, **not for LED neon, does not use the central config file**
+- [`sign-text-zoom.scad`](sign-text-zoom.scad): one box sign for a complete word (e.g., video call alert), **not for LED neon, does not use the central config file**
 - [`include/shapes2D.scad`](include/shapes2D.scad): creates simple 2D shapes for extruding, can be included in own projects
 - [`include/LEDneon.scad`](include/LEDneon.scad): creates the LED neon frames from 2D shapes, can be included in own projects
 - [`include/signmaker.scad`](include/signmaker.scad): creates box and lid style signs from 2D shapes and text, can be included in own projects
