@@ -10,7 +10,7 @@ You can vectorize bitmaps in Inkscape, save the result as an SVN file and create
 
 There are some scripts to create frames from text. The most viable approach might be to print single letters separately, not complete words. Another approach is to draw the (handwritten) text as thin lines in an SVG file and then use the line tracing module to generate frames.
 
-The project also includes scripts to create box and lid style signs, inspired by BigClive's script in the description of his livestream on 2022-06-11. These signs are not intended for LED neon, but for fitting normal LEDs inside. They work both with text, most 2D shapes, and imported SVG files. The examples for those do not use the central configuration file.
+The project also includes scripts to create box and lid style signs, inspired by BigClive's script in the description of his livestream on 2022-06-11. These signs are not intended for LED neon, but for fitting normal LEDs or (flat) LED tape inside. They work both with text, most 2D shapes, and imported SVG files. The examples for those do not use the central configuration file.
 
 ## Files
 - [`neon-dimension.scad`](neon-dimension.scad): the central configuration file for global parameters like the size of the LED neon strip
