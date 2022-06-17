@@ -42,6 +42,7 @@ The project also includes scripts to create box and lid style signs, inspired by
 - [`sign-text-zoom.scad`](sign-text-zoom.scad): one box sign for a complete word (e.g., video call alert), **not for LED neon, does not use the central config file**
 - [`sign-text-brim.scad`](sign-text-brim.scad): one word box sign, held together by a brim, **not for LED neon, does not use the central config file**
 - [`sign-text-block.scad`](sign-text-block.scad): one word box sign, different wall width inside and outside to create a block, **not for LED neon, does not use the central config file**
+- [`sign-text-offset.scad`](sign-text-offset.scad): one word box sign, shows how to use `offset()` to make letters more bold, **not for LED neon, does not use the central config file**
 - [`include/shapes2D.scad`](include/shapes2D.scad): creates simple 2D shapes for extruding, can be included in own projects
 - [`include/LEDneon.scad`](include/LEDneon.scad): creates the LED neon frames from 2D shapes, can be included in own projects
 - [`include/signmaker.scad`](include/signmaker.scad): creates box and lid style signs from 2D shapes and text, can be included in own projects
