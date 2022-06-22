@@ -14,3 +14,13 @@ module drill(debug=false) {
         #children([1:$children-1]);
     }
 }
+
+module bolder(wdth=2, rond=false) {
+    if(!rond) {
+        offset(delta=wdth)
+            children();
+    } else {
+        offset(r=wdth)
+            children();
+    }
+}

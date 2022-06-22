@@ -19,16 +19,13 @@ text="B";
 font="Qwigley:style=Regular";
 
 //Text size
-size=150;
+size=50;
 
 //Text spacing
 space=1.0;
 
 //Height of the sign body
-h=15;
-
-//Make each letter bolder by a specified offset
-delta=4.2;
+h=10;
 
 //Wall width
 ww=2.4;
@@ -42,12 +39,16 @@ fh=1.2;
 //Play for fitting face
 pl=0.2;
 
+//Make each letter bolder by a specified offset
+bld=ww/2;
+
 ///////////////////////////
 $fn=60;
 
 include <include/signmaker.scad>;
+include <include/util.scad>;
 
-makesign(h=h, ww=ww, fl=fl, fh=fh, pl=pl, face=false) {
-    offset(delta=delta)
+makesign(h=h, ww=ww, fl=fl, fh=fh, pl=pl, rond=true, face=false) {
+    bolder(wdth=bld, rond=true)
         text(text, font=font, size=size, spacing=space);
 }
