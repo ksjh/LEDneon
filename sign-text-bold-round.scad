@@ -4,6 +4,16 @@
 // BigClive's livestream from 2022-06-11.
 //
 // Applying an offset allows to make letters bolder.
+// You can use the bolder() module in include/util.scad
+// for this purpose.
+// Specifying the parameter rond=true to both
+// the bolder() and the makesign() modules allows
+// you to round off both the (bolder) face plate
+// and the sign body.
+//
+// The resulting sign is very similar to the
+// ones created by BigClive's script in his video
+// called "Make DIY custom LED signage"
 //
 // Select the font name from the list of available fonts:
 // Menu: "Help" > "Font List"
@@ -15,7 +25,7 @@
 text="B";
 
 //Font to use
-//form: https://fonts.google.com/?category=Display,Handwriting
+//from: https://fonts.google.com/?category=Display,Handwriting
 font="Qwigley:style=Regular";
 
 //Text size
