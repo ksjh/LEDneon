@@ -3,7 +3,7 @@ OpenSCAD scripts for LED neon strip
 
 Inspired by [bigclive.com](http://bigclive.com/)
 
-Just some scripts to create 3D printed frames for LED neon stips from 2D objects in OpenSCAD.
+Just some scripts to create 3D printed frames for LED neon strips from 2D objects in OpenSCAD.
 Also works with text, but make sure the rounding radius `rr` is suitable.
 
 You can vectorize bitmaps in Inkscape, save the result as an SVG file and create LED neon frames from them. Unfortunately, for sensible values of `rr`, some 2D shapes have to be scaled up so much that you cannot print them with commonly available 3D printers in one piece. Otherwise, you would lose way too many details or would create too sharp edges for the LED tape. Some shapes work, however. Sometimes, it may make sense to print individual parts of the shapes individually. 
